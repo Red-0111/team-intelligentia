@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Research Application Form</title>
+    <title>Job Finder</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
@@ -206,10 +206,16 @@
     <div class="testbox">
     <form action="/">
       <div class="banner">
-        <h1>Research Application Form</h1>
+        <h1>Job Finder</h1>
+      </div>
+      
+      <h5>Personal Details:</h5>
+      <div class="item">
+        <p>Full Name<span class="required">*</span></p>
+        <input type="text" name="name" required/>
       </div>
       <div class="item">
-        <p>Title of Research Proposal</p>
+        <p>Key Skills</p>
         <input type="text" name="name"/>
       </div>
       <div class="item">
@@ -217,21 +223,16 @@
         <input type="date" name="bdate" required/>
         <i class="fas fa-calendar-alt"></i>
       </div>
-      <h5>1. Principal Investigator:</h5>
       <div class="item">
-        <p>Name and Credentials<span class="required">*</span></p>
-        <input type="text" name="name" required/>
-      </div>
-      <div class="item">
-        <p>Mailing Address<span class="required">*</span></p>
+        <p>Address<span class="required">*</span></p>
         <input type="text" name="name" placeholder="Street address" required/>
         <input type="text" name="name" placeholder="Street address line 2" required/>
         <div class="city-item">
           <input type="text" name="name" placeholder="City" required/>
-          <input type="text" name="name" placeholder="Region" required/>
+          <input type="text" name="name" placeholder="District" required/>
           <input type="text" name="name" placeholder="Postal / Zip code" required/>
           <select required>
-            <option value="">Country</option>
+            <option value="">State</option>
             <option value="1">Russia</option>
             <option value="2">Germany</option>
             <option value="3">France</option>
@@ -252,124 +253,59 @@
         <p>Email<span class="required">*</span></p>
         <input type="text" name="name" required/>
       </div>
-      <h5>2. Co-Investigator:</h5>
-      <div class="item">
-        <p>Name and Credentials<span class="required">*</span></p>
-        <input type="text" name="name" required/>
-      </div>
-      <div class="item">
-        <p>Mailing Address<span class="required">*</span></p>
-        <input type="text" name="name" placeholder="Street address" required/>
-        <input type="text" name="name" placeholder="Street address line 2" required/>
-        <div class="city-item">
-          <input type="text" name="name" placeholder="City" required/>
-          <input type="text" name="name" placeholder="Region" required/>
-          <input type="text" name="name" placeholder="Postal / Zip code" required/>
-          <select required>
-            <option value="">Country</option>
-            <option value="1">Russia</option>
-            <option value="2">Germany</option>
-            <option value="3">France</option>
-            <option value="4">Armenia</option>
-            <option value="5">USA</option>
-          </select>
-        </div>
-      </div>
-      <div class="item">
-        <p>Phone<span class="required">*</span></p>
-        <input type="text" name="name" required/>
-      </div>
-      <div class="item">
-        <p>Fax</p>
-        <input type="text" name="name" />
-      </div>
-      <div class="item">
-        <p>Email<span class="required">*</span></p>
-        <input type="text" name="name" required/>
-      </div>
-      <h5>3. Institute Member</h5>
-      <div class="question">
-        <p>Principle investigator:<span class="required">*</span></p>
-        <div class="question-answer">
-          <input type="radio" value="none" id="radio_1" name="investigator" required/>
-          <label for="radio_1" class="radio"><span>Yes</span></label>
-          <input type="radio" value="none" id="radio_2" name="investigator" required/>
-          <label for="radio_2" class="radio"><span>No</span></label>
-        </div>
-      </div>
-      <div class="question">
-        <p>Co-Investigator:<span class="required">*</span></p>
-        <div class="question-answer">
-          <input type="radio" value="none" id="radio_3" name="co-investigator" required/>
-          <label for="radio_3" class="radio"><span>Yes</span></label>
-          <input type="radio" value="none" id="radio_4" name="co-investigator" required/>
-          <label for="radio_4" class="radio"><span>No</span></label>
-        </div>
-      </div>
-      <h5>4. Have you applied for or are you now receiving funding support for this research?</h5>
+      <h5>Job Type</h5>
       <div class="question">
         <p><span class="required">*</span></p>
         <div class="question-answer">
           <input type="radio" value="none" id="radio_5" name="research" required/>
-          <label for="radio_5" class="radio"><span>Yes</span></label>
+          <label for="radio_5" class="radio"><span>Full Time</span></label>
           <input type="radio" value="none" id="radio_6" name="research" required/>
-          <label for="radio_6" class="radio"><span>No</span></label>
+          <label for="radio_6" class="radio"><span>Part Time</span></label>
         </div>
       </div>
-      <h5>5. IRB:</h5>
-      <div class="question">
-        <p>Have you applied for IRB review:</p>
-        <div class="question-answer">
-          <input type="radio" value="none" id="radio_7" name="IRB"/>
-          <label for="radio_7" class="radio"><span>Yes</span></label>
-          <input type="radio" value="none" id="radio_8" name="IRB"/>
-          <label for="radio_8" class="radio"><span>No</span></label>
-        </div>
-      </div>
-      <h5>6. Students only:</h5>
       <div class="item">
-        <p>Name of research advisor:</p>
+        <p>Work Experience</p>
         <input type="text" name="name" />
       </div>
       <div class="item">
-        <p>Include a letter of support from advisor in application packet.<span class="required">*</span></p>
+        <p>Functional Area<span class="required">*</span></p>
         <textarea rows="3" required></textarea>
       </div>
       <div class="question">
-        <p>Research Application Checklist:<span class="required">*</span></p>
+        <p>Type of Disability:<span class="required">*</span></p>
         <small>Please include the following in your application.</small>
         <div class="question-answer checkbox-item">
           <div>
             <input type="checkbox" value="none" id="check_1" name="checklist" required/>
-            <label for="check_1" class="check"><span>Proposal Cover Form</span></label>
+            <label for="check_1" class="check"><span>Autism</span></label>
           </div>
           <div>
             <input type="checkbox" value="none" id="check_2" name="checklist" required/>
-            <label for="check_2" class="check"><span>Abstract</span></label>
+            <label for="check_2" class="check"><span>Down Syndrome</span></label>
           </div>
           <div>
             <input type="checkbox" value="none" id="check_3" name="checklist" required/>
-            <label for="check_3" class="check"><span>Narrative</span></label>
+            <label for="check_3" class="check"><span>Dyslexia</span></label>
           </div>
           <div>
             <input type="checkbox" value="none" id="check_4" name="checklist" required/>
-            <label for="check_4" class="check"><span>Budget and Budget Justification</span></label>
+            <label for="check_4" class="check"><span>Bipolar</span></label>
           </div>
           <div>
             <input type="checkbox" value="none" id="check_5" name="checklist" required/>
-            <label for="check_5" class="check"><span>Timeframe</span></label>
+            <label for="check_5" class="check"><span>Alzheimer</span></label>
           </div>
           <div>
             <input type="checkbox" value="none" id="check_6" name="checklist" required/>
-            <label for="check_6" class="check"><span>References</span></label>
+            <label for="check_6" class="check"><span>Hearing Impairment</span></label>
           </div>
           <div>
             <input type="checkbox" value="none" id="check_7" name="checklist" required/>
-            <label for="check_7" class="check"><span>Appendices</span></label>
+            <label for="check_7" class="check"><span>Vision Impairment</span></label>
           </div>
           <div>
             <input type="checkbox" value="none" id="check_8" name="checklist" required/>
-            <label for="check_8" class="check"><span>Bio Sketch</span></label>
+            <label for="check_8" class="check"><span>Mobility Impairment</span></label>
           </div>
           </div
         </div>
