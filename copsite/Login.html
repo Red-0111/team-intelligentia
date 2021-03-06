@@ -1,0 +1,801 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.disabilityjobs.gov.in/Login.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Mar 2021 17:52:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="Head1"><title>
+	Job Portal for PwDs, Government of India.
+</title>
+  
+   
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    
+
+    <script type="text/javascript">
+        
+
+            function GetCaptchaAudio() {
+
+                $.ajax({
+                    type: "POST",
+                    url: "Login.aspx/PlayAudio",
+                    data: "{}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        var file = "AudioCaptcha/" + msg.d;
+                        var audio = new Audio(file);
+                        audio.play();
+
+                        setTimeout(function ()
+                        {
+                            DeleteAudio(msg.d)
+                        }, 5000);
+                                             
+                    }
+                });
+                return false;
+            }
+
+
+            function DeleteAudio(FIleName)
+            {
+                $.ajax({
+                    type: "POST",
+                    url: "Login.aspx/DeleteAudio",
+                    data: JSON.stringify({
+                        FileName: FIleName,
+
+                    }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) { }
+                       
+                });
+
+            }
+
+
+    </script>
+
+
+</head>
+<body>
+    <form method="post" action="http://www.disabilityjobs.gov.in/Login.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcea57e.js?d=JsHX_nxOqL6Vh3_fIrb7HH0GPJs7a6Xz5nRAyTosP-7JRD7gnc4U7IG95fc1MHOVM3tuXk-iiIHm-4kVjX-j4pIXk0MbZ-7t-3iPWzNzzUU1&amp;t=635589633571259667" type="text/javascript"></script>
+
+
+<script src="ScriptResourcecf65.js?d=inasfXVjZYeKwf4DoFMNr3OanpNDpvDxEJvnxtxoH_ZWJzXqYMserGTfRcY4Pwn9MbeTq_4FSAb8_qt7fSeRMe7dN6cab3ZUpazYD3Q5p2X1ZxDqBByKyOF8UFl5844khrg2vI9Sr7MG_Td4omrk61WBs5_nhr7XJSL42i0Qo_g1&amp;t=7e14e7ac" type="text/javascript"></script>
+<script src="ScriptResource7b48.js?d=HOmUxM9-4-z9JUjCQtOEIPT61djtRJvcUtFQettcu4DEZTZfu3PbIGCnjJNOccearD_xYt3oV123opjJBkoFlfuSoVZWmIFDXiwnCwYlBlko5KxGkEq20S5mOXoQqZGYazvhzTQvoSnO8HsdAOF180rtad33DotQF78b5x-3j4Bb46P_jYReWdXqLRgYGmct0&amp;t=ffffffff805766b3" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="ScriptResource237b.js?d=uKHpA4L_WqWMICBs2PX9m6app2fPps7TJfRrIxoRJVEJCGLkSzu9kGNTo-SQuQKsz9bE28d0HI-kPHzRUJE0WnqwUUZvLKzd_UHmFbDGSWqQWok41w6ZpX1PP-HRAcp9DlFxrk4FLVGOYllPdJF7TMFHNKk5AXoAXo0HmtKe3WhCznsg0wd8zih8HexflQgU0&amp;t=ffffffff805766b3" type="text/javascript"></script>
+<script src="ScriptResource3371.axd?d=rICa7U8SHfTsW-C1-IqRNzDMbgJPWGRY_BfFlWL5_MHBx5EPZvTD7NurOjy1g6PqxSm5NPYKHxs09pMfGZbHf01LgZXKPWGUYTNylxKSmjEY2xynyggW_ZRHEZZ2t2BkZxt8XBDOGUjAgwhQGUkkpW4Dat5TlhpiAfeD_6dZOMg1&amp;t=54b2c61" type="text/javascript"></script>
+<script src="ScriptResource12ce.axd?d=7B_BKErErLOXU08VTNRpjBn79PbSmq8qI1EI3GVNsaHnfERCv2vYRsRPZqbWvcEIgkU0XQ1wgGLflopFEAJ6sEP4wYqwkD_Umyc3MMFFGgyjoey73HQyL7TcY0TdQFbC7eTj6mh2zO6mcG_RdUt2_Qy_3uUg1s_UsJAkOkw4gLQ1&amp;t=54b2c61" type="text/javascript"></script>
+<script src="ScriptResource3846.axd?d=lrIMcJAI6gKpvN5-06GpltgZMrkXR-_DNAtejyIeYE50k1Yh3JF5UOauIJ3-HZBy2CCWWtk1_ulBveKc12It1sZySNnggS8gVmdeKTDTwJ1IdkRXwlm7BhOkpiE-R1yhvI8Ws_J5_nfkuDFaC5NJeq0dgZGqN5AeOPF3xRB_Azj6bkzVJUDOq3Nm3UNcP-eS0&amp;t=54b2c61" type="text/javascript"></script>
+<script src="ScriptResourceb7e7.axd?d=B1FxqMcu59JP2QwDBJZkANxLYbKBRi7FLxzQwa5_aAHRkf3kTe_3gJgR0u_nKY5IC8Nub3emkmcknUe146EVSbRE74Cr95kilMRQEqyEYl1BsUJKMpemCrIq787r4KHbIP9fGbvYzAnZh9gd9xfGj9CsKnjBR8Ry_HZGZPgQD2Y1&amp;t=54b2c61" type="text/javascript"></script>
+<script src="ScriptResourced5ea.axd?d=K3g2L_3tA2RMj9oHxg5UKsRQU-Ljuy4n8hdnbkgANDhZp-3QyS9YwlmMpRj8Eik3csEd6y_2IDa0Lk993nTaG-sKH3t6VBNrjY2fRYZbm8BImNfIeVoyj2S23E3ns6qgVWm2AXmpE7ZNaAH_Dj1FzOBECu3WMZpRLyGLog_si2cPC9gaYt_429PTIutWuDCX0&amp;t=54b2c61" type="text/javascript"></script>
+<script src="ScriptResource7088.axd?d=pfLhkzSSycxy3-q000yVaGgrRUAJCAadKt9o4IuHERrWm8-OEVStTOIFJ57PHwBbRRg6UYC7Wp0Eduw7_HJCt4hIEidnbtpQ8hlChlGsmNsWLoCtpJK91w5xq7iCDoCGdPKogr07Q582zF-KB4-Re_5uqWMB4xV4P1T2y-tytQZGetgbSCqH4adwfyMiW2Mb0&amp;t=54b2c61" type="text/javascript"></script>
+<script src="ScriptResource2cae.axd?d=Vga7imxWqWa0RKVKCYYHS-uLWwICarGsX0AAHm-6pQ0PxqgJ4DCIzgHuPH9ayGgoWhM7a3OUXGnKHtq3LkPLe32lz8dRqYIW-44vq42fEOuE0uzgwhhCk3PR32FIjVUZIOIERI77RLjtc5RrF9i8r-41KQSAD-fmM4JEe0dHFASDDjYWitz4YpIMY9KDEkNV0&amp;t=54b2c61" type="text/javascript"></script>
+<script src="ScriptResource2185.axd?d=qEOPEWkvs5qlVWK78O4d5A4MyD3HkIpdSQZpP_gCvNsgWxlb11wGi-4NuqeQXS6QUzMjoe0hdepw7fqOdlAL1qfxghnx3_PDQ7JrEbbGSeIPc257NRJ9ONQIkWW5Va7ceYLrNaQ93IUrMryPmJmPrAp2KSo6FLujgJRYabzjqs41&amp;t=54b2c61" type="text/javascript"></script>
+<script src="ScriptResource4c3f.axd?d=71qLhqjFhiQXsWOn1PPHbSemsxvnMFFZ4A9-6Y3mRriVvZWYG20mnvV200GLYJG7kDnEXGxSvTcppBmVJHO2m9QIkGpYOOuyqZy6_g9xEscQ9w29Zdc634uNwyMm44FdG9uuAGTHEDBpg39gefGYsmaP6FSumyJcUoE6RU3dmNFJ0qZuzzGfpDACv3lHcvTZ0&amp;t=54b2c61" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div class="topbar-outer">
+        <div class="topbar">
+            
+
+             <link id="HeaderAssetsforouter_lnkCSS" href="main.css" rel="stylesheet" type="text/css"></link>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#incfont').click(function () {
+            curSize = parseInt($("div").css('font-size')) + 2;
+            if (curSize <= 30)
+                $("div").css('font-size', curSize);
+            $("table tr td").css('font-size', curSize);
+            $("a").css('font-size', curSize);
+            $("strong").css('font-size', curSize);
+            $("span").css('font-size', curSize);
+        });
+        $('#decfont').click(function () {
+            curSize = parseInt($("div").css('font-size')) - 2;
+            if (curSize >= 9)
+                $("div").css('font-size', curSize);
+            $("table tr td").css('font-size', curSize);
+            $("a").css('font-size', curSize);
+            $("strong").css('font-size', curSize);
+            $("span").css('font-size', curSize);
+        });
+    });
+</script>
+<div class="topbar-left">
+    <ul>
+       
+        <li>
+     
+            <a id="HeaderAssetsforouter_Lnk_Hindi" class="hindi" href="javascript:__doPostBack(&#39;ctl00$HeaderAssetsforouter$Lnk_Hindi&#39;,&#39;&#39;)">हिन्दी</a>
+        </li>
+        <li><a href="Screen-reader-access.html" id="HeaderAssetsforouter_AScreenReaderAccess">Screen Reader Access</a></li>
+        <li>
+        
+            <a id="HeaderAssetsforouter_ASkiptoMaincontent" href="#mainContent">Skip to Main Content</a>
+        </li>
+        <li><a href="#">
+            <img src="images/small-size.jpg" id="decfont" /></a></li>
+        <li><a href="#">
+            <img src="images/medium-size.jpg" onclick="javascript:location.reload();" /></a></li>
+        <li><a href="#">
+            <img src="images/large-size.jpg" id="incfont" /></a></li>
+        <li><a href="#">
+            <input type="image" name="ctl00$HeaderAssetsforouter$Btn_GreenTheme" id="HeaderAssetsforouter_Btn_GreenTheme" src="images/green-theme.jpg" />
+        </a></li>
+        <li><a href="#">
+            <input type="image" name="ctl00$HeaderAssetsforouter$Btn_ThemeBlack" id="HeaderAssetsforouter_Btn_ThemeBlack" src="images/black-theme.jpg" />
+        </a></li>
+        <li><a href="#">
+            <input type="image" name="ctl00$HeaderAssetsforouter$Btn_Red" id="HeaderAssetsforouter_Btn_Red" src="images/red-theme.jpg" />
+        </a></li>
+    </ul>
+    <div class="clear">
+    </div>
+</div>
+
+            
+
+            <div class="topbar-right">
+                 
+<div class="header-right">
+    <div class="menu">
+        <ul>
+       <li><a id="LoginMenu_lnkLogin" href="javascript:__doPostBack(&#39;ctl00$LoginMenu$lnkLogin&#39;,&#39;&#39;)">Job Seeker Signup</a> </li>
+                    <li> <a id="LoginMenu_lnkTrainingInst" href="javascript:__doPostBack(&#39;ctl00$LoginMenu$lnkTrainingInst&#39;,&#39;&#39;)">Training Institutes Signup</a></li>
+                    <li><a id="LoginMenu_lnkEmpSignUp" href="javascript:__doPostBack(&#39;ctl00$LoginMenu$lnkEmpSignUp&#39;,&#39;&#39;)">Employer Signup</a></li>
+
+
+            <li>
+            </li>
+
+            <li></li>
+           <li>
+               
+           </li>
+                                <li>
+                                    <input type="image" name="ctl00$LoginMenu$imgLogin" id="LoginMenu_imgLogin" src="images/LoginEng.png" style="height: 16px" />
+                       
+                        </li>        
+        </ul>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+
+               
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+   <div class="header-outer">
+        <div class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="Index-2.html">
+                        <div id="Logo_Heading" class="logo-heading" style="padding-left: 0px"> <div style='padding-left: 0px' runat='server'><img src='images/Swavlambanlogo1.png' height='120px' width='130px' style='float:left'/></div></div>
+                        <div id="Logo_SubHeading" class="logo-sub-heading"><div style='float: left; margin-top: -95px; margin-left: 55px; font-size:16px; color:#507634'> <b> Department of Empowerment of Persons with Disabilities,Ministry of Social Justice and Empowerment, Govt. of India </b> </div></div>
+                    </a>
+                </div>
+            </div>
+            <div class="header-right-logo">
+                </div>
+
+                 
+<div class="header-right">
+    <div class="menu">
+        <ul>
+            <li>
+                        <div class="menu-icon">
+                            <img id="BasicPageLink_imgHome" src="images/home-icon.png" />
+                            </div>
+                        <div class="menu-txt">
+                           <a href="Index-2.html" id="BasicPageLink_aHomeText">Home</a>
+                            </div>
+                    </li>
+            
+                    <li>
+                        <div class="menu-icon">
+                            <img id="BasicPageLink_RPT_BasicMenuItem_Image1_0" src="BasicMenuICO/contact-icon.png" />
+                            </div>
+                        <div class="menu-txt">
+                          
+                            <a href='pagee535.html?Name=Contact-Us'>Contact Us</a>
+                            </div>
+                    </li>
+                
+                    <li>
+                        <div class="menu-icon">
+                            <img id="BasicPageLink_RPT_BasicMenuItem_Image1_1" src="BasicMenuICO/about-icon.png" />
+                            </div>
+                        <div class="menu-txt">
+                          
+                            <a href='pagef21c.html?Name=About-Us'>About Us</a>
+                            </div>
+                    </li>
+                
+        
+        </ul>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+
+            
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    <div class="content-outer" 
+        background-repeat: no-repeat; background-attachment: fixed; background-position: top left;
+        background-size: cover;">
+        <div class="content">
+            <div class="formcss" id="mainContent">
+                
+    
+<link href="login.css" rel="stylesheet" type="text/css" />
+<style>
+    .modalBackground
+    {
+        background-color: Black;
+        filter: alpha(opacity=60);
+        opacity: 0.6;
+    }
+    .modalPopup
+    {
+        background-color: #FFFFFF;
+        width: 600px;
+        border: 3px solid #0DA9D0;
+        border-radius: 12px;
+        padding: 0;
+    }
+    .modalPopup .header
+    {
+        background-color: #2FBDF1;
+        height: 30px;
+        color: White;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .modalPopup .body
+    {
+        min-height: 50px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .modalPopup .footer
+    {
+        padding: 6px;
+    }
+    .modalPopup .yes, .modalPopup .no
+    {
+        height: 23px;
+        color: White;
+        line-height: 23px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .modalPopup .yes
+    {
+        background-color: #2FBDF1;
+        border: 1px solid #0DA9D0;
+    }
+    .modalPopup .no
+    {
+        background-color: #9F9F9F;
+        border: 1px solid #5C5C5C;
+    }
+</style>
+<script>
+    function CLearControls() {
+
+        $('#ContentPlaceHolder1_lgn_txtEmailId').val("");
+        $('#ContentPlaceHolder1_lgn_txtCapCode').val("");
+        //document.getElementById("ContentPlaceHolder1_lgn_lblFPErr").innerHTML = "";
+    }
+    function ClrCtrl() {
+      
+        $('#ContentPlaceHolder1_lgn_txtVerifyEmailID').val("");
+        $('#ContentPlaceHolder1_lgn_reVerifyEmailID').innerHTML = "";
+        //$('#ContentPlaceHolder1_lgn_reVerifyEmailID')[0].errormessage = "";
+        //document.getElementById("ContentPlaceHolder1_lgn_lblFPErr").innerHTML = "";
+        return false;
+    }
+    
+    //function GetCaptchaAudio() {
+       
+    //    $.ajax({
+    //        type: "POST",
+    //        url: "UC_LoginControl.ascx/PlayAudio",
+    //        data: "{}",
+    //        contentType: "application/json; charset=utf-8",
+    //        dataType: "json",
+    //        success: function (msg) {
+    //            // Do something interesting here.
+    //        }
+    //    });
+    //    return false;
+    //}
+
+</script>
+<script type="text/javascript" src="js/MD5.js"></script>
+<script type="text/javascript" src="js/CustomMD5.js"></script>
+
+<div class="content">
+     <input type="hidden" name="ctl00$ContentPlaceHolder1$lgn$hdnRandomString" id="ContentPlaceHolder1_lgn_hdnRandomString" value="KEDAKPIWGH" />
+    <section class="container">
+    <div class="login">
+         <h1>Login to Web App</h1>
+      <form>
+      <p>
+       <table id="ContentPlaceHolder1_lgn_RBL_UserType">
+	<tr>
+		<td><input id="ContentPlaceHolder1_lgn_RBL_UserType_0" type="radio" name="ctl00$ContentPlaceHolder1$lgn$RBL_UserType" value="JobSeeker" checked="checked" /><label for="ContentPlaceHolder1_lgn_RBL_UserType_0">Job Seeker</label></td><td><input id="ContentPlaceHolder1_lgn_RBL_UserType_1" type="radio" name="ctl00$ContentPlaceHolder1$lgn$RBL_UserType" value="Recruiter" /><label for="ContentPlaceHolder1_lgn_RBL_UserType_1">Job Provider</label></td><td><input id="ContentPlaceHolder1_lgn_RBL_UserType_2" type="radio" name="ctl00$ContentPlaceHolder1$lgn$RBL_UserType" value="Institute" /><label for="ContentPlaceHolder1_lgn_RBL_UserType_2">Institute/ NGO</label></td>
+	</tr>
+</table>
+      </p>
+        <p>
+         <input name="ctl00$ContentPlaceHolder1$lgn$txtusername" type="text" id="ContentPlaceHolder1_lgn_txtusername" placeholder="Username or Email" autocomplete="off" />
+        </p>
+        <p>
+        <input name="ctl00$ContentPlaceHolder1$lgn$txtPassword" type="password" id="ContentPlaceHolder1_lgn_txtPassword" placeholder="Password" autocomplete="off" />
+             <input type="hidden" name="ctl00$ContentPlaceHolder1$lgn$hdnsetpassowrd" id="ContentPlaceHolder1_lgn_hdnsetpassowrd" />
+             <input type="hidden" name="ctl00$ContentPlaceHolder1$lgn$hdnprevpwd" id="ContentPlaceHolder1_lgn_hdnprevpwd" />
+        </p>
+        <p>
+      
+       
+         <img id="ContentPlaceHolder1_lgn_imgCaptcha" src="Captcha0674.gif?637505831142743622" style="height:30px;width:100px;" />
+                          
+         <input type="image" name="ctl00$ContentPlaceHolder1$lgn$RefreshCaptchna" id="ContentPlaceHolder1_lgn_RefreshCaptchna" src="images/Refresh.jpg" />
+            
+                            <input type="image" name="ctl00$ContentPlaceHolder1$lgn$imgAudioCaptcha" id="ContentPlaceHolder1_lgn_imgAudioCaptcha" src="images/speakerimage.jpg" onclick="return GetCaptchaAudio();" style="height:25px;width:45px;" />
+
+      <input name="ctl00$ContentPlaceHolder1$lgn$txtCaptcha" type="text" id="ContentPlaceHolder1_lgn_txtCaptcha" placeholder="Captcha Code" />
+          
+        </p>
+        <p>
+        
+        </p>
+          <p>
+              
+          </p>
+          <p>
+        <a onclick="CLearControls();" id="ContentPlaceHolder1_lgn_lnlForgetpassword" class="STD" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lgn$lnlForgetpassword&#39;,&#39;&#39;)">Forgot 
+                    Your Password?</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="images/NHFDC_JOBP_StepByStep241215.pdf" target="_blank">Job Seeker Help</a>
+        </p>
+        <p class="remember_me" style="display:none">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">
+            Remember me on this computer
+          </label>
+        </p>
+
+        
+        <p class="submit">
+         <input type="submit" name="ctl00$ContentPlaceHolder1$lgn$btnpassword" value="Login" onclick="HashPass();" id="ContentPlaceHolder1_lgn_btnpassword" />
+        </p>
+         <p class="submit">
+      <strong style="color:Gray; text-align:left">  Not Registered Yet?</strong>
+ 
+         <input type="submit" name="ctl00$ContentPlaceHolder1$lgn$btnSignUpnow" value="SignUp Now" id="ContentPlaceHolder1_lgn_btnSignUpnow" />
+                
+        </p>
+       
+      </form>
+    </div>
+  </section>
+</div>
+
+<div id="ContentPlaceHolder1_lgn_PNL_Users" class="modalPopup" style="display:block">
+	
+   To Reset your password, type full email address that you use to sign in to your Job Portal Account.
+     <div class="footer" align="center">
+        <h2>
+        Forgot Your Password?</h2>
+        <table >
+            <tr>
+                <td width="125px"></td>
+                <td><input name="ctl00$ContentPlaceHolder1$lgn$txtEmailId" type="text" id="ContentPlaceHolder1_lgn_txtEmailId" placeholder="Email ID" /></td>
+                <td></td>
+                 <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <input name="ctl00$ContentPlaceHolder1$lgn$txtCapCode" type="text" id="ContentPlaceHolder1_lgn_txtCapCode" placeholder="Captcha Code" /></td>
+                <td> <img id="ContentPlaceHolder1_lgn_imgCaptchaFP" src="Captcha0674.gif?637505831142743622" style="height:30px;width:100px;" /></td>
+                <td><input type="image" name="ctl00$ContentPlaceHolder1$lgn$imgCapFP" id="ContentPlaceHolder1_lgn_imgCapFP" src="images/Refresh.jpg" /></td>
+            </tr>
+            <tr>
+                <td align="center"  colspan="4">
+                    <span id="ContentPlaceHolder1_lgn_lblFPErr" style="color:Red;font-size:Medium;"></span>
+                </td>
+            </tr>
+        <tr>
+                <td></td>
+                <td> <input type="submit" name="ctl00$ContentPlaceHolder1$lgn$Btn_Forgotpwd" value="Send" id="ContentPlaceHolder1_lgn_Btn_Forgotpwd" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$lgn$btnNo" value="Cancel" id="ContentPlaceHolder1_lgn_btnNo" />
+                </td>
+                <td>&nbsp;</td>
+             <td></td>
+            </tr>
+        </table>
+
+       
+    </div>
+    
+  
+
+</div>
+
+
+
+<div id="ContentPlaceHolder1_lgn_PNL_VerificationMail" class="modalPopup" style="display:none">
+	
+   
+     <div class="footer" align="center">
+        <h2>
+            Send Verification Email</h2>
+        <table style="width:400px;" >
+            <tr>
+                <td width="150px" align="left"><b>Enter Valid Email ID :</b></td>
+                <td><input name="ctl00$ContentPlaceHolder1$lgn$txtVerifyEmailID" type="text" id="ContentPlaceHolder1_lgn_txtVerifyEmailID" placeholder="Email ID" autocomplete="off" style="width:250px;" /></td>
+                <td><span id="ContentPlaceHolder1_lgn_rfvVerifyEmailID" style="color:Red;visibility:hidden;">*</span> </td>
+             
+            </tr>
+            <tr>
+                <td align="center"  colspan="3">
+                     <span id="ContentPlaceHolder1_lgn_reVerifyEmailID" style="color:Red;display:none;">Invalid Email format.</span>
+                    
+                </td>
+            </tr>
+        <tr>
+                <td></td>
+                <td> <input type="submit" name="ctl00$ContentPlaceHolder1$lgn$btnSendVerificationMail" value="Send" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$lgn$btnSendVerificationMail&quot;, &quot;&quot;, true, &quot;VerifyEmail&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_lgn_btnSendVerificationMail" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$lgn$btnCancel" value="Cancel" onclick="return ClrCtrl();" id="ContentPlaceHolder1_lgn_btnCancel" />
+                </td>
+                <td>&nbsp;</td>
+             <td></td>
+            </tr>
+        </table>
+
+
+
+
+        
+       
+    </div>
+    
+  
+
+</div>
+
+            </div>
+        </div>
+    </div>
+    
+<div class="footer-outer">
+    <div class="footer">
+        <div class="footer-links">
+            <div class="footer-links-panel">
+                <h1 id="ftr_h1JobSeek">JOB SEEKERS</h1>
+                <ul>
+                    
+                            <li><a href='Index-2.html'>Home</a></li>
+                        
+                            <li><a href='#'>Search Jobs</a></li>
+                        
+                            <li><a href='#'>View All Jobs</a></li>
+                        
+                            <li><a href='http://cvmkr.com/'>Resume Builder</a></li>
+                        
+                            <li><a href='Help.html'>Help</a></li>
+                        
+                            <li><a href='FAQ.html'>FAQs</a></li>
+                        
+                            <li><a href='FeedBack2971.html?Type=FeedBack'>Feedback</a></li>
+                        
+                            <li><a href='PhotoGallery.html'>Photo Gallery</a></li>
+                        
+                            <li><a href='frmViewSuccessStory.html'>Success Stories</a></li>
+                        
+                            <li><a href='FeedBacka5f6.html?Type=Grievances'>Grievances</a></li>
+                        
+                            <li><a href='quick-links.html'>Quick Links</a></li>
+                        
+                            <li><a href='AccessibilityStatement.html'>Accessibility Statement</a></li>
+                        
+                            <li><a href='PrivacyPolicy.html'>Privacy Policy</a></li>
+                        
+                            <li><a href='Disclaimer.html'>Disclaimer</a></li>
+                        
+                  
+                
+                </ul>
+            </div>
+            <div class="footer-links-panel">
+                <h1 id="ftr_h1JobByFun">JOBS BY FUNCTIONS</h1>
+                <ul>
+                    
+                            <li>
+                                <a id="ftr_RPT_FunctionalArea_Lnk_FuncArea_0" href="javascript:__doPostBack(&#39;ctl00$ftr$RPT_FunctionalArea$ctl00$Lnk_FuncArea&#39;,&#39;&#39;)">Jobs by Industry</a>
+                            </li>
+                        
+                            <li>
+                                <a id="ftr_RPT_FunctionalArea_Lnk_FuncArea_1" href="javascript:__doPostBack(&#39;ctl00$ftr$RPT_FunctionalArea$ctl01$Lnk_FuncArea&#39;,&#39;&#39;)">Government Jobs</a>
+                            </li>
+                        
+                            <li>
+                                <a id="ftr_RPT_FunctionalArea_Lnk_FuncArea_2" href="javascript:__doPostBack(&#39;ctl00$ftr$RPT_FunctionalArea$ctl02$Lnk_FuncArea&#39;,&#39;&#39;)">Placement Consultants</a>
+                            </li>
+                        
+                            <li>
+                                <a id="ftr_RPT_FunctionalArea_Lnk_FuncArea_3" href="javascript:__doPostBack(&#39;ctl00$ftr$RPT_FunctionalArea$ctl03$Lnk_FuncArea&#39;,&#39;&#39;)">BPO Jobs in India </a>
+                            </li>
+                        
+                            <li>
+                                <a id="ftr_RPT_FunctionalArea_Lnk_FuncArea_4" href="javascript:__doPostBack(&#39;ctl00$ftr$RPT_FunctionalArea$ctl04$Lnk_FuncArea&#39;,&#39;&#39;)">Pharmacy Jobs in India</a>
+                            </li>
+                        
+                            <li>
+                                <a id="ftr_RPT_FunctionalArea_Lnk_FuncArea_5" href="javascript:__doPostBack(&#39;ctl00$ftr$RPT_FunctionalArea$ctl05$Lnk_FuncArea&#39;,&#39;&#39;)">Engineering Jobs in India</a>
+                            </li>
+                        
+                            <li>
+                                <a id="ftr_RPT_FunctionalArea_Lnk_FuncArea_6" href="javascript:__doPostBack(&#39;ctl00$ftr$RPT_FunctionalArea$ctl06$Lnk_FuncArea&#39;,&#39;&#39;)">Finance Jobs in India</a>
+                            </li>
+                        
+                            <li>
+                                <a id="ftr_RPT_FunctionalArea_Lnk_FuncArea_7" href="javascript:__doPostBack(&#39;ctl00$ftr$RPT_FunctionalArea$ctl07$Lnk_FuncArea&#39;,&#39;&#39;)">Software Jobs in India</a>
+                            </li>
+                        
+                            <li>
+                                <a id="ftr_RPT_FunctionalArea_Lnk_FuncArea_8" href="javascript:__doPostBack(&#39;ctl00$ftr$RPT_FunctionalArea$ctl08$Lnk_FuncArea&#39;,&#39;&#39;)">IT Jobs in India</a>
+                            </li>
+                        
+                            <li>
+                                <a id="ftr_RPT_FunctionalArea_Lnk_FuncArea_9" href="javascript:__doPostBack(&#39;ctl00$ftr$RPT_FunctionalArea$ctl09$Lnk_FuncArea&#39;,&#39;&#39;)">Sales Jobs in India</a>
+                            </li>
+                        
+                </ul>
+            </div>
+            <div class="footer-links-panel">
+                <h1 id="ftr_h1JobByLoc">JOBS BY LOCATION</h1>
+                <ul>
+                    <table id="ftr_DTL_Location" cellspacing="0" style="border-collapse:collapse;background-color: inherit;">
+	<tr>
+		<td>
+                            <li>
+                                <a id="ftr_DTL_Location_Lnk_DIstic_0" href="javascript:__doPostBack(&#39;ctl00$ftr$DTL_Location$ctl00$Lnk_DIstic&#39;,&#39;&#39;)">Andaman</a>
+                            </li>
+                        </td>
+	</tr><tr>
+		<td>
+                            <li>
+                                <a id="ftr_DTL_Location_Lnk_DIstic_1" href="javascript:__doPostBack(&#39;ctl00$ftr$DTL_Location$ctl01$Lnk_DIstic&#39;,&#39;&#39;)">Nicobar</a>
+                            </li>
+                        </td>
+	</tr><tr>
+		<td>
+                            <li>
+                                <a id="ftr_DTL_Location_Lnk_DIstic_2" href="javascript:__doPostBack(&#39;ctl00$ftr$DTL_Location$ctl02$Lnk_DIstic&#39;,&#39;&#39;)">Adilabad</a>
+                            </li>
+                        </td>
+	</tr><tr>
+		<td>
+                            <li>
+                                <a id="ftr_DTL_Location_Lnk_DIstic_3" href="javascript:__doPostBack(&#39;ctl00$ftr$DTL_Location$ctl03$Lnk_DIstic&#39;,&#39;&#39;)">Anantapur</a>
+                            </li>
+                        </td>
+	</tr><tr>
+		<td>
+                            <li>
+                                <a id="ftr_DTL_Location_Lnk_DIstic_4" href="javascript:__doPostBack(&#39;ctl00$ftr$DTL_Location$ctl04$Lnk_DIstic&#39;,&#39;&#39;)">Chittoor</a>
+                            </li>
+                        </td>
+	</tr><tr>
+		<td>
+                            <li>
+                                <a id="ftr_DTL_Location_Lnk_DIstic_5" href="javascript:__doPostBack(&#39;ctl00$ftr$DTL_Location$ctl05$Lnk_DIstic&#39;,&#39;&#39;)">East Godavari</a>
+                            </li>
+                        </td>
+	</tr><tr>
+		<td>
+                            <li>
+                                <a id="ftr_DTL_Location_Lnk_DIstic_6" href="javascript:__doPostBack(&#39;ctl00$ftr$DTL_Location$ctl06$Lnk_DIstic&#39;,&#39;&#39;)">Guntur</a>
+                            </li>
+                        </td>
+	</tr><tr>
+		<td>
+                            <li>
+                                <a id="ftr_DTL_Location_Lnk_DIstic_7" href="javascript:__doPostBack(&#39;ctl00$ftr$DTL_Location$ctl07$Lnk_DIstic&#39;,&#39;&#39;)">Hyderabad</a>
+                            </li>
+                        </td>
+	</tr><tr>
+		<td>
+                            <li>
+                                <a id="ftr_DTL_Location_Lnk_DIstic_8" href="javascript:__doPostBack(&#39;ctl00$ftr$DTL_Location$ctl08$Lnk_DIstic&#39;,&#39;&#39;)">YSR district</a>
+                            </li>
+                        </td>
+	</tr><tr>
+		<td>
+                            <li>
+                                <a id="ftr_DTL_Location_Lnk_DIstic_9" href="javascript:__doPostBack(&#39;ctl00$ftr$DTL_Location$ctl09$Lnk_DIstic&#39;,&#39;&#39;)">Karimnagar</a>
+                            </li>
+                        </td>
+	</tr>
+</table>
+                </ul>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div id="ftr_divHeading" class="footer-address"><h1 > CONTACT US</h1> Powered By<br /> </span> </b> <h2 style='font-size:14px '>Department of Empowerment of Persons with Disabilities</h2><p style='font-size:13px '>Ministry of Social Justice & Empowerment<br /> 5th Floor <br /> Paryavaran Bhawan, CGO Complex, Lodhi Road <br /> New Delhi - 110003 (India)</p><br /><p>Managed By</p><h2 style='font-size:14px '>National Handicapped Finance and Development Corporation,</h2><p style='font-size:13px '>Unit No. 11 & 12 ,DLF Prime Tower, <br /> Near Tehkhand Village, <br /> Okhla Phase - I, New Delhi-110 020 <br /> Ph: 011-45803730 <br/>Toll Free: 1800 11 4515</p></div>
+        <div class="clear">
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="bottom">
+        
+        Last Updated on:<span id="ftr_lbl_UpdatedDate">Friday, March 5, 2021 11:18 PM</span>
+        <div>
+            Copyright © 2015 National Handicapped Finance and Development Corporation,India All rights reserved.</div>
+        <div>
+            <table width="100%" style="background-color: inherit !important; color: white !important;
+                width: 100% !important">
+                <tr>
+                    <td style="height: 5px; width: 100%">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="width: 100%;">
+                        Powered and Managed by: NHFDC
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" style="width: 100%;">
+                        Designed & Developed by:
+                        <img id="ftr_AkalInfosysLogo" src="images/AkalInfosysLogo.png" style="height:30px;width:60px;" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p>
+            This website has been designed w.e.f 22.12.2015 so as to meet Guidelines for Indian
+            Government Websites.It adheres to Level AA of the Web Content Accessibility
+            Guidelines (WCAG 2.0) of the World Wide Web Consortium (W3C). This is the website
+            to fulfill accessibility norms also for Persons with Disabilities...
+        </p>
+        <div>
+            Visitor No:<span id="ftr_lblcounter" style="color:White;background-color:Red;"></span>
+        </div>
+    </div>
+</div>
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ContentPlaceHolder1_lgn_rfvVerifyEmailID"), document.getElementById("ContentPlaceHolder1_lgn_reVerifyEmailID"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ContentPlaceHolder1_lgn_rfvVerifyEmailID = document.all ? document.all["ContentPlaceHolder1_lgn_rfvVerifyEmailID"] : document.getElementById("ContentPlaceHolder1_lgn_rfvVerifyEmailID");
+ContentPlaceHolder1_lgn_rfvVerifyEmailID.controltovalidate = "ContentPlaceHolder1_lgn_txtVerifyEmailID";
+ContentPlaceHolder1_lgn_rfvVerifyEmailID.errormessage = "*";
+ContentPlaceHolder1_lgn_rfvVerifyEmailID.validationGroup = "VerifyEmail";
+ContentPlaceHolder1_lgn_rfvVerifyEmailID.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_lgn_rfvVerifyEmailID.initialvalue = "";
+var ContentPlaceHolder1_lgn_reVerifyEmailID = document.all ? document.all["ContentPlaceHolder1_lgn_reVerifyEmailID"] : document.getElementById("ContentPlaceHolder1_lgn_reVerifyEmailID");
+ContentPlaceHolder1_lgn_reVerifyEmailID.controltovalidate = "ContentPlaceHolder1_lgn_txtVerifyEmailID";
+ContentPlaceHolder1_lgn_reVerifyEmailID.focusOnError = "t";
+ContentPlaceHolder1_lgn_reVerifyEmailID.errormessage = "Invalid Email format.";
+ContentPlaceHolder1_lgn_reVerifyEmailID.display = "Dynamic";
+ContentPlaceHolder1_lgn_reVerifyEmailID.validationGroup = "VerifyEmail";
+ContentPlaceHolder1_lgn_reVerifyEmailID.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ContentPlaceHolder1_lgn_reVerifyEmailID.validationexpression = "\\w+([-+.\']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ContentPlaceHolder1_lgn_btnNo","PopupControlID":"ContentPlaceHolder1_lgn_PNL_Users","dynamicServicePath":"/Login.aspx","id":"ContentPlaceHolder1_lgn_mpeForgetPassr"}, null, null, $get("ContentPlaceHolder1_lgn_lnlForgetpassword"));
+});
+
+document.getElementById('ContentPlaceHolder1_lgn_rfvVerifyEmailID').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_lgn_rfvVerifyEmailID'));
+}
+
+document.getElementById('ContentPlaceHolder1_lgn_reVerifyEmailID').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_lgn_reVerifyEmailID'));
+}
+//]]>
+</script>
+</form>
+</body>
+
+<!-- Mirrored from www.disabilityjobs.gov.in/Login.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Mar 2021 17:52:28 GMT -->
+</html>

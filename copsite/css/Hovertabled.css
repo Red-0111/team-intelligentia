@@ -1,0 +1,140 @@
+﻿
+        .formSubTitle
+        {
+            background-color: #3d5a27;
+            color: white;
+            font-family: Verdana;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: bold;
+            height: 20px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+       
+        table
+        {
+            background-color:#fff;
+            border-collapse: collapse; /* IE7 and lower */
+            border-spacing: 0;
+             font-family: 'trebuchet MS' , 'Lucida sans' , Arial;
+            font-size: 14px;
+            color: #000000;
+            width: 90%;
+        }
+        
+        
+        .bordered
+        {
+            border: solid #ccc 1px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            -webkit-box-shadow: 0 1px 1px #ccc;
+            -moz-box-shadow: 0 1px 1px #ccc;
+            box-shadow: 0 1px 1px #ccc;
+        }
+        .bordered tr:hover
+        {
+            background: #c7dcb7;
+            -o-transition: all 0.1s ease-in-out;
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -ms-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+        }
+        
+        .bordered td, .bordered th
+        {
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            padding: 6px;
+            text-align: left;
+        }
+        
+        
+        .bordered td:first-child, .bordered th:first-child
+        {
+            border-left: none;
+        }
+        
+        .bordered th:first-child
+        {
+            -moz-border-radius: 6px 0 0 0;
+            -webkit-border-radius: 6px 0 0 0;
+            border-radius: 6px 0 0 0;
+        }
+        
+        .bordered th:last-child
+        {
+            -moz-border-radius: 0 6px 0 0;
+            -webkit-border-radius: 0 6px 0 0;
+            border-radius: 0 6px 0 0;
+        }
+        
+        .bordered th:only-child
+        {
+            -moz-border-radius: 6px 6px 0 0;
+            -webkit-border-radius: 6px 6px 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+        
+        .bordered tr:last-child td:first-child
+        {
+            -moz-border-radius: 0 0 0 6px;
+            -webkit-border-radius: 0 0 0 6px;
+            border-radius: 0 0 0 6px;
+        }
+        
+        .bordered tr:last-child td:last-child
+        {
+            -moz-border-radius: 0 0 6px 0;
+            -webkit-border-radius: 0 0 6px 0;
+            border-radius: 0 0 6px 0;
+        }
+        .customtxt_box
+        {
+        }
+       
+        .Err
+        {
+            background-color: #c04848;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            text-align: left;
+            z-index: 1;
+            font-size: 12px !important;
+            padding-left: 2px;
+            padding: 7px;
+            margin-left: 3px;
+            margin-bottom: 7PX;
+        }
+        .smallTextBox
+        {
+            width: 50px;
+        }
+        
+        .dispNone
+        {
+            display: none;
+        }
+        
+        .dispBlock
+        {
+            display: block;
+        }
+        
+       
+        .firstTd
+        {
+            width: 350px;
+        }
+        .secondTd
+        {
+            width: 450px;
+        }
+        .thirdTd
+        {
+            width: 250px;
+        }
